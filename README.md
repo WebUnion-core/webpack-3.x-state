@@ -11,7 +11,7 @@
 
 package.json 文件中 scripts 项中自定义了可以执行的命令，如图：
 
-![image]("./introduction/s1-1.png")
+![image](./introduction/s1-1.png)
 
 在命令窗口下执行`npm run build`命令即可使用 webpack 打包资源。
 
