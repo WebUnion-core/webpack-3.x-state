@@ -12,5 +12,8 @@ module.exports = {
         path: DIST_PATH,
         publicPath: DIST_PATH,
         filename: 'index.js'
-    }
+    },
+    loaders: [
+        
+    ]
 }
