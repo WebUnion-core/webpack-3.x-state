@@ -10,7 +10,7 @@ module.exports = {
     ],
     output: {
         path: DIST_PATH,
-        publicPath: DIST_PATH,
-        filename: 'index.js'
+        publicPath: "./dist/",
+        filename: "index.js"
     }
 }

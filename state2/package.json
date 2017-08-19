@@ -1,5 +1,5 @@
 {
-  "name": "webpack_demo1",
+  "name": "webpack_demo2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,10 @@
   "author": "WJT20",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^0.28.1",
+    "file-loader": "^0.11.1",
+    "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
     "webpack": "^3.5.4"
   }
 }

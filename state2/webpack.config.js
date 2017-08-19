@@ -10,10 +10,26 @@ module.exports = {
     ],
     output: {
         path: DIST_PATH,
-        publicPath: DIST_PATH,
-        filename: 'index.js'
+        publicPath: "./dist/",
+        filename: "index.js"
     },
-    loaders: [
-        
-    ]
+    module: {
+        loaders: [
+            {
+                //CSS样式表打包
+                test: /\.css$/,
+                loaders: ["style-loader", "css-loader"]
+            },
+            {
+                //图像打包
+                test: /\.(png|jpg|jpeg|gif)$/,
+                loader: "url-loader?limit=8192"
+            },
+            {
+                //字体及svg打包
+                test: /\.(woff|ttf|tff|otf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "file-loader"
+            }
+        ]
+    }
 }
