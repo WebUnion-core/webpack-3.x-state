@@ -18,7 +18,7 @@ module.exports = {
     output: {
         path: DIST_PATH,
         publicPath: "./dist/",
-        filename: "[name].[hash:8].js",
+        filename: "[name].[hash:8].js", //出口名不能固定不变
         chunkFilename: "[name].[hash:8].js"
     },
     module: {
@@ -52,10 +52,15 @@ module.exports = {
 
         new ExtractTextWebpackPlugin("[name].[hash:8].css"), //参数是输出的CSS文件URL
 
-        第一个参数是要清除的目标目录下的指定文件或目录的数组
+        //第一个参数是要清除的目标目录下的指定文件或目录的数组
         new CleanWebpackPlugin([
             DIST_PATH,
             path.resolve(__dirname, "index.html")
-        ])
+        ]),
+
+        //names数组元素与entry集合的键一一对应
+        new webpack.optimize.CommonsChunkPlugin({
+            names: ["vendor"]
+        }),
     ]
 }

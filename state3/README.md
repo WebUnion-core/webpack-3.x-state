@@ -17,4 +17,6 @@
 
 非原生插件，需引入模块 clean-webpack-plugin，此插件用于在打包前清除打包目标目录下的所有文件。
 
-### DllPlugin ###
+### CommonsChunkPlugin ###
+
+原生插件，实为 webpack.optimize.CommonsChunkPlugin，此插件用于单独打包公共模块，但 CommonsChunkPlugin 有一个问题，那就是原本提取的公共模块本不因随着每次修改其他代码而发生变化，然而事实是每次修改自己的代码后使用 webpack 打包时，webpack 会重新返回一个 hash，只要 hash 变化，导出的公共模块也会跟着变化，最终导致每次公共模块都会重载。
