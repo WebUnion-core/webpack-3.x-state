@@ -1,10 +1,9 @@
 {
-  "name": "webpack_demo2",
+  "name": "webpack_demo3",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --colors"
   },
   "author": "WJT20",
